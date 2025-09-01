@@ -1,22 +1,17 @@
-import {createBrowserRouter, RouterProvider} from 'react-router-dom'
-import HomePage from './HomePage'
-import './App.css'
-import VideoPage from './VideoPage'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomePage from "./HomePage";
+import VideoPage from "./VideoPage";
+import "./App.css";
 
 function App() {
-  const router = createBrowserRouter([
-    {
-      path: '/',
-      element: <HomePage/>
-    },
-    {
-      path: '/room/:roomId',
-      element: <VideoPage/>,
-    },
-  ])
   return (
-    <RouterProvider router={router} />
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/room/:roomId" element={<VideoPage />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;

@@ -15,7 +15,7 @@ export const VideoPage = () => {
             sharedLinks: [
                 {
                     name: 'Copy Link',
-                    url: `https://localhost:5173/room/${roomId}`,
+                    url: `${window.location.origin}/room/${roomId}`,
                 },
             ],
             scenario: {
